@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-int main(int argc, char *argv[]){
- printf("%s\n",argu[1]);
+int main(int argc, char const*argv[]){
+ printf("%s\n",argv[1]);
 return 0;
 }
