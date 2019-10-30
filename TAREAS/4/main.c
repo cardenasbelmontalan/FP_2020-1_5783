@@ -1,22 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
-int main (int argc,char*argv[]){
-}
-	//Se declara la varaiable suma 
-	//Declara variables
-	int lista[argc],suma=0;
-	float promedio;
-	//Usando For
-	for(int i=1; i<argc; i++){
-		lista[i]=atoi(argv[i]);
+int main(int argc, char*argv[]){
+	
+	//Declarando variables
+	double x=0;
+	
+	//Construyendo estructura de repetición 
+	for(int i=1;i<argc;i++){
+		double y=atof(argv[i]);
+		x=y+x;
 	}
-	for(int i=1; i<argc; i++){
-		suma=suma+lista[i];
-	}
-		
-	//Promedio
-	promedio=(float)suma/(argc-1);
-	printf("%f\n", promedio);
+	//Generando promedio
+	double promedio=x/(argc-1);
+	printf("%.2lf\n",promedio);
 	
 	return 0;
 }
