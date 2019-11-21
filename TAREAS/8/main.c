@@ -1,16 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
-int main(int argc, char*argv[]){
+int main(int argc, char*argu[]){
 	//Declarar
-	float x,y,z;
+	double x,y,z;
 	
 	//Almacenar en variable float
-	x=atof(argv[1]);
-	y=atof(argv[2]);
+	x=atof(argu[1]);
+	y=atof(argu[2]);
 	
 	//Condicionando a grados
 	if(x==1){
-		z=(y*1.8)+32;
+		z=(y-32)/1.8;
 		//Mostrar resultado
 		printf("%.2f\n",z);
 		return 0;
@@ -18,7 +18,7 @@ int main(int argc, char*argv[]){
 	//Condicionando a grados F
 	else
 		if(x==0){
-			z=(y-32)/1.8;
+			z=32+(y*1.8);
 			//Resultado
 			printf("%.2f\n",z);
 			return 0;
